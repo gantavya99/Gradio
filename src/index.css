@@ -41,3 +41,51 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.container{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  display:grid;
+  height:70vh;
+   box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(8, 21, 65, 0.25);
+  width:25vw;
+  background-color: white;
+  border-radius:2rem;
+  }
+  h1{
+    margin-top:2rem ;
+  }
+  h2{
+    padding-top:0;
+    margin-top:0;
+  }
+  .email-pass{
+    width:80%;
+    height:50%;
+    margin:1em;
+    border-radius:5px;
+    border:1px rgb(171, 166, 166) solid;
+    padding-left:1em;
+  }
+  a{
+    color:rgb(86, 86, 197);
+  }
+  a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color:blue;
+  }
+  .login-btn{
+    background-color: #fdc886;
+    border:none;
+    font-weight: bold;
+    width:85%;
+    border-radius:5px;
+    height:100%;
+    font-size:0.95em;
+    cursor:pointer;
+  }
+  .login-btn:hover{
+    background-color: #dfa966;
+  }
