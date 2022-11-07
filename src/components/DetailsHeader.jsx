@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-
-const DetailsHeader = ({ artistId, artistData, songData }) => (
+import React from 'react';
+const DetailsHeader = ({ artistId, artistData, songData }) => {
+  const artistData=artistData?.artists[artistId]?.attributes;
+  return(
   <div className="relative w-full flex flex-col">
     <div className="w-full bg-gradient-to-l from-transparent to-black sm:h-48 h-28" />
 
@@ -12,7 +14,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => (
             .replace('{w}', '500')
             .replace('{h}', '500')
             : songData?.images?.coverart
-}
+            }
         className="sm:w-48 w-28 sm:h-48 h-28 rounded-full object-cover border-2 shadow-xl shadow-black"
       />
 
@@ -33,9 +35,10 @@ const DetailsHeader = ({ artistId, artistData, songData }) => (
         </p>
       </div>
     </div>
-
+    
     <div className="w-full sm:h-44 h-24" />
   </div>
-);
+  )
+ };
 
-export default DetailsHeader;r;
+export default DetailsHeader;
