@@ -7,14 +7,18 @@ import { useGetSongDetailsQuery  ,useGetSongRelatedQuery } from '../redux/servic
 
 const SongDetails = () => {
 const dispatch=useDispatch();
-const { songid } = useParams();
-console.log(songid);
-const { data:songData,isFetching : isFetchingSongDetails}=useGetSongDetailsQuery({songid})
-
+const { songid ,id:artistId} = useParams();
 const { activeSong , isPlaying }=useSelector((state=>state.player));
+
 
 const { data, isFetching: isFetchinRelatedSongs, error } = useGetSongRelatedQuery({ songid });
 const { data: songData, isFetching: isFetchingSongDetails } = useGetSongDetailsQuery({ songid });
+
+
+
+
+
+
 
 if (isFetchingSongDetails && isFetchinRelatedSongs) return <Loader title="Searching song details" />;
 
